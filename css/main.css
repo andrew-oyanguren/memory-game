@@ -1,0 +1,234 @@
+/* ===== Keyframes ===== */
+@-webkit-keyframes pulse {
+  0%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(0.9, 0.9);
+            transform: scale(0.9, 0.9);
+  }
+  75% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+@keyframes pulse {
+  0%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(0.9, 0.9);
+            transform: scale(0.9, 0.9);
+  }
+  75% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+
+@-webkit-keyframes skew {
+  0%, 100% {
+    -webkit-transform: skew(0);
+            transform: skew(0);
+  }
+  50% {
+    -webkit-transform: skew(5deg, 5deg);
+            transform: skew(5deg, 5deg);
+  }
+}
+
+@keyframes skew {
+  0%, 100% {
+    -webkit-transform: skew(0);
+            transform: skew(0);
+  }
+  50% {
+    -webkit-transform: skew(5deg, 5deg);
+            transform: skew(5deg, 5deg);
+  }
+}
+
+@-webkit-keyframes overlay-grow {
+  from {
+    background: rgba(0, 0, 0, 0);
+    font-size: 0;
+  }
+  to {
+    background: -webkit-gradient(linear, left top, right top, from(#202c20), to(#304230));
+    background: linear-gradient(to right, #202c20, #304230);
+    font-size: 3.75rem;
+  }
+}
+
+@keyframes overlay-grow {
+  from {
+    background: rgba(0, 0, 0, 0);
+    font-size: 0;
+  }
+  to {
+    background: -webkit-gradient(linear, left top, right top, from(#202c20), to(#304230));
+    background: linear-gradient(to right, #202c20, #304230);
+    font-size: 3.75rem;
+  }
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Header */
+header .game-title-wrapper .game-title {
+  color: #202c20;
+  font-family: "Anton", sans-serif;
+  font-size: 4rem;
+  letter-spacing: 0.25rem;
+  text-align: center;
+  padding-top: 5rem;
+}
+
+.container {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.container .game-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  gap: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .game-grid .game-info-wrapper {
+  grid-column: 1 / -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.container .game-grid .game-info-wrapper .game-info h2 {
+  color: #F1970B;
+  font-family: "Hind Siliguri", sans-serif;
+  font-size: 1.75rem;
+  text-transform: uppercase;
+}
+
+.container .game-grid .game-info-wrapper .game-info span {
+  color: #202c20;
+}
+
+.container .game-grid .card {
+  background: lightgray;
+  width: 150px;
+  height: 175px;
+  position: relative;
+  overflow: hidden;
+  border-radius: .5rem;
+}
+
+.container .game-grid .card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 350ms ease-in;
+  transition: -webkit-transform 350ms ease-in;
+  transition: transform 350ms ease-in;
+  transition: transform 350ms ease-in, -webkit-transform 350ms ease-in;
+}
+
+.container .game-grid .card-front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.container .game-grid .card:hover {
+  cursor: pointer;
+  -webkit-animation: skew 350ms ease 2;
+          animation: skew 350ms ease 2;
+}
+
+.container .game-grid .card.show .card-back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.container .game-grid .card.show .card-front {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+.container .game-grid .card.match .card-front {
+  -webkit-animation: pulse 1000ms linear infinite 350ms;
+          animation: pulse 1000ms linear infinite 350ms;
+}
+
+.container .overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 10;
+  color: #fafafa;
+  font-family: "Anton", sans-serif;
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.75);
+}
+
+.container .overlay span:hover {
+  cursor: pointer;
+  -webkit-animation: pulse 1000ms linear infinite;
+          animation: pulse 1000ms linear infinite;
+}
+
+.container .overlay.visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-animation: overlay-grow 500ms forwards;
+          animation: overlay-grow 500ms forwards;
+}
+
+.container .overlay.visible i {
+  font-size: 2.75rem;
+}
+/*# sourceMappingURL=main.css.map */

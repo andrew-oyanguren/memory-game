@@ -7,11 +7,123 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Memory Game</title>
 
+  <!-- Google Fonts CDN -->
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Hind+Siliguri&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="/css/main.css">
+
 </head>
 
 <body>
+
+  <header>
+    <div class="game-title-wrapper">
+      <h1 class="game-title">Animal Match</h1>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="container">
+
+      <!-- Overlays -->
+
+      <div id="game-start-text" class="overlay">
+        <span>Click TO Start!</span>
+      </div>
+
+      <div id="game-over-text" class="overlay">
+        <i>Game Over</i>
+        <span>Click To Restart</span>
+      </div>
+
+      <div id="game-win-text" class="overlay"></div>
+
+      <div class="game-grid">
+
+        <!-- Top Info -->
+        <div class="game-info-wrapper">
+          <div class="game-info">
+            <h2>Time: <span id="time-ramaining">100</span></h2>
+          </div>
+          <div class="game-info">
+            <h2>Flips: <span id="flips">0</span></h2>
+          </div>
+        </div>
+
+        <!-- Cards -->
+        <div class="card">
+          <div class="card-back card-face">
+            <img src="./img/card-pattern.jpg" alt="Back of card">
+          </div>
+          <div class="card-front card-face">
+            <img src="./img/mouse.png" alt="Mouse">
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-back card-face">
+            <img src="./img/card-pattern.jpg" alt="Back of card">
+          </div>
+          <div class="card-front card-face">
+            <img src="./img/penguin.png" alt="Penguin">
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-back card-face">
+            <img src="./img/card-pattern.jpg" alt="Back of card">
+          </div>
+          <div class="card-front card-face">
+            <img src="./img/tiger.png" alt="Tiger">
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-back card-face">
+            <img src="./img/card-pattern.jpg" alt="Back of card">
+          </div>
+          <div class="card-front card-face">
+            <img src="./img/lamb.png" alt="Lamb">
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-back card-face">
+            <img src="./img/card-pattern.jpg" alt="Back of card">
+          </div>
+          <div class="card-front card-face">
+            <img src="./img/penguin.png" alt="Penguin">
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-back card-face">
+            <img src="./img/card-pattern.jpg" alt="Back of card">
+          </div>
+          <div class="card-front card-face">
+            <img src="./img/mouse.png" alt="Mouse">
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-back card-face">
+            <img src="./img/card-pattern.jpg" alt="Back of card">
+          </div>
+          <div class="card-front card-face">
+            <img src="./img/tiger.png" alt="Tiger">
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-back card-face">
+            <img src="./img/card-pattern.jpg" alt="Back of card">
+          </div>
+          <div class="card-front card-face">
+            <img src="./img/lamb.png" alt="Lamb">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
 
 
   <!-- Scripts -->

@@ -1,0 +1,33 @@
+/* ===== Keyframes ===== */
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(.9, .9);
+  }
+  75% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes skew {
+  0%, 100% {
+    transform: skew(0);
+  }
+  50% {
+    transform: skew(5deg, 5deg);
+  }
+}
+
+@keyframes overlay-grow {
+  from {
+    background: rgba(0, 0, 0, 0);
+    font-size: 0;
+  }
+  to {
+    background: linear-gradient(to right, $color-primary, rgb(48, 66, 48));
+    font-size: 3.75rem;
+  }
+}
