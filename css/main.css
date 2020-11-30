@@ -88,6 +88,22 @@ img {
   max-width: 100%;
 }
 
+:root {
+  font-size: 1rem;
+}
+
+@media (min-width: 850px) {
+  :root {
+    font-size: 1.15rem;
+  }
+}
+
+@media (min-width: 995px) {
+  :root {
+    font-size: 1.35rem;
+  }
+}
+
 /* Header */
 header .game-title-wrapper .game-title {
   color: #202c20;
@@ -136,10 +152,11 @@ header .game-title-wrapper .game-title {
 
 .container .game-grid .card {
   background: lightgray;
-  width: 150px;
-  height: 175px;
+  width: 9.375rem;
+  height: 10.9375rem;
   position: relative;
   overflow: hidden;
+  border: solid 2px #6b6b6b;
   border-radius: .5rem;
 }
 
@@ -189,6 +206,27 @@ header .game-title-wrapper .game-title {
 .container .game-grid .card.match .card-front {
   -webkit-animation: pulse 1000ms linear infinite 350ms;
           animation: pulse 1000ms linear infinite 350ms;
+}
+
+/* Media Queries */
+@media (min-width: 850px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container .game-grid {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .container .overlay {

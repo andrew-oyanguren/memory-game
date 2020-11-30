@@ -10,3 +10,20 @@ img {
   display: block;
   max-width: 100%;
 }
+
+// Sizing from the root
+:root {
+  font-size: 1rem;
+}
+
+@media (min-width: $breakpoint-medium) {
+  :root {
+    font-size: 1.15rem;
+  }
+}
+
+@media (min-width: $breakpoint-large) {
+  :root {
+    font-size: 1.35rem;
+  }
+}

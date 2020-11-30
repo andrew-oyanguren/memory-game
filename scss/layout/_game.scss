@@ -29,11 +29,12 @@
 
     .card {
       background: lightgray;
-      width: 150px;
-      height: 175px;
+      width: 9.375rem;
+      height: 10.9375rem;
       position: relative;
       overflow: hidden;
 
+      border: solid 2px rgb(107, 107, 107);
       border-radius: .5rem;
 
       &-face {
@@ -77,4 +78,21 @@
 
   }
 
+}
+
+/* Media Queries */ 
+
+@media (min-width: $breakpoint-medium) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .game-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
 }
