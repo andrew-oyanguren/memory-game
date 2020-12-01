@@ -56,8 +56,7 @@
     font-size: 0;
   }
   to {
-    background: -webkit-gradient(linear, left top, right top, from(#202c20), to(#304230));
-    background: linear-gradient(to right, #202c20, #304230);
+    background: #202c20;
     font-size: 3.75rem;
   }
 }
@@ -68,8 +67,7 @@
     font-size: 0;
   }
   to {
-    background: -webkit-gradient(linear, left top, right top, from(#202c20), to(#304230));
-    background: linear-gradient(to right, #202c20, #304230);
+    background: #202c20;
     font-size: 3.75rem;
   }
 }

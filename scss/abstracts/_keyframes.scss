@@ -27,7 +27,7 @@
     font-size: 0;
   }
   to {
-    background: linear-gradient(to right, $color-primary, rgb(48, 66, 48));
+    background: $color-primary;
     font-size: 3.75rem;
   }
 }
